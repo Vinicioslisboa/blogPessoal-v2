@@ -12,3 +12,13 @@
     font-size: 50px;
     font-family: 'bebas neue', sans-serif
 }
+
+.ebutton{
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.ebutton:hover{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}

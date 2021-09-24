@@ -26,3 +26,13 @@ ul.social-network li{
 .fa-github-square:hover{
     color: black;
 }
+
+.ebutton{
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.ebutton:hover{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}

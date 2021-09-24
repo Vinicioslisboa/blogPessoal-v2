@@ -3,7 +3,22 @@
 
 }
 
+.fs-14{
+    font-size: 14pt;
+
+}
+
 a{
     cursor: pointer;
 
+}
+
+.ebutton{
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.ebutton:hover{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
 }
