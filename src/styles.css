@@ -16,3 +16,18 @@ html{
 .tipofonte{
     font-family: 'bebas neue', sans-serif
 }
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: white;
+    border-radius: 6px;
+    width: 50px;
+}
+
+::-webkit-scrollbar-track{
+    background-color:black;
+
+}
