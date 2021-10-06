@@ -49,3 +49,28 @@ textarea:focus {
     border:1px solid #ffc107;
     box-shadow: 0 0 10px #ffc107;
 }
+
+.tipofonteModal{
+    font-size: 30px;
+    font-family: 'bebas neue', sans-serif
+}
+
+.tipofonteInicio{
+    font-size: 45px;
+    font-family: 'bebas neue', sans-serif
+}
+
+.tipofontePostagem{
+    font-size: 25px;
+    font-family: 'bebas neue', sans-serif
+}
+
+.ebutton{
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.ebutton:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
