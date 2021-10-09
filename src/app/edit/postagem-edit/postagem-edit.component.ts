@@ -38,6 +38,7 @@ export class PostagemEditComponent implements OnInit {
     let id = this.route.snapshot.params['id']
     this.findByIdPostagem(id)
     this.findAllTemas
+    this.getAllTemas()
   }
 
   findByIdPostagem(id: number){
@@ -46,10 +47,15 @@ export class PostagemEditComponent implements OnInit {
     })
   }
 
+  getAllTemas(){
+    this.temaService.getAllTema().subscribe((resp: Tema[]) =>{
+      this.listaTemas = resp
+    })
+  }
+
   findByIdTema(){
     this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
       this.tema = resp
-
     })
   }
 

@@ -21,7 +21,7 @@ tema: Tema = new Tema()
 
   ngOnInit(){
     if(environment.token == ''){
-      this.router.navigate(['/entrar'])
+      this.router.navigate(['/login'])
     }
 
     let id = this.route.snapshot.params['id']
