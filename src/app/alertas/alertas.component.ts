@@ -16,11 +16,10 @@ export class AlertasComponent implements OnInit {
     public modal: BsModalRef
   ) { }
 
-  ngOnInit() {
+  ngOnInit(){
   }
 
   onClose(){
     this.modal.hide()
   }
-
 }
