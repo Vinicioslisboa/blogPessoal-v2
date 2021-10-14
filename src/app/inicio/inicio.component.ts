@@ -18,6 +18,8 @@ export class InicioComponent implements OnInit {
 
   postagem: Postagem = new Postagem
   listaPostagens: Postagem[]
+  tituloPost: string
+  nomeTema: string
 
   tema: Tema = new Tema
   listaTemas: Tema[]
@@ -42,7 +44,7 @@ export class InicioComponent implements OnInit {
     window.scroll(0,0)
 
     if(environment.token == ''){
-      alert('Sua sessão expirou, faça o login novamente.')
+      this.alertas.showAlertPrimary('Sua sessão expirou, faça o login novamente.')
       this.router.navigate(['/login'])
     }
     this.getAllTemas()
@@ -86,6 +88,26 @@ export class InicioComponent implements OnInit {
       this.postagem = new Postagem
       this.getAllPostagens()
     })
+  }
+
+  findByTituloPostagem(){
+    if(this.tituloPost ==''){
+      this.getAllPostagens()
+    }else{
+      this.postagemService.getByTituloPostagem(this.tituloPost).subscribe((resp: Postagem[]) => {
+        this.listaPostagens = resp
+      })
+    }
+  }
+
+  findByNomeTema(){
+    if(this.tituloPost ==''){
+      this.getAllPostagens()
+    }else{
+      this.temaService.getByNomeTema(this.nomeTema).subscribe((resp: Tema[]) => {
+        this.listaTemas = resp
+      })
+    }
   }
 
 }
